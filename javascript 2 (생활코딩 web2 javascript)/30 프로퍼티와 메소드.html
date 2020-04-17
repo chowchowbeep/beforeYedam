@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Object</title>
+</head>
+<body>
+    <h1>Object</h1>
+
+    <h2>Create</h2>
+    <script>
+        var coworkers ={
+            "programmer":"egoing",
+            "designer":"leezche"
+        };
+        document.write("programmer : "+coworkers.programmer+"<br>");
+        document.write("designer : "+coworkers.designer+"<br>");    
+        coworkers.bookkeeper = "duru"; // 객체에 데이터 추가
+        document.write("bookkeeper : "+coworkers.bookkeeper+"<br>")    
+        coworkers["data scientist"] ="taeho"; // 객체에 데이터 추가
+        document.write("data scientist : "+coworkers["data scientist"]+"<br>")
+    </script>
+
+    <h2>Iterate</h2>
+    <script>
+        for(var key in coworkers){
+            document.write(key+" : "+coworkers[key]+"<br>");
+        }
+    </script>
+<!-- 객체 안에는 문자열, 숫자, 배열, 함수 등등 여러가지 담을 수 있음 -->
+    
+    <h2>Property & Method</h2>
+    <script>
+// ※var function = 함수이름(){} 로 함수를 정의할 수도 있음.
+// object.key = value로 객체에 데이터 추가하는 방법을 상기해 볼 것.
+// showAll은 key, function이 value가 되어 객체 속에 추가 될 수 있음.
+// 이 때 객체 속에 추가된 함수를 Method라고 부름.
+        coworkers.showAll = function(){
+            for(var key in this){  
+                document.write(key+' : '+this[key]+'<br>');
+            }
+        } //this는 coworkers를 가리킴.
+        coworkers.showAll();
+        // 다음과 같이 출력됨.
+        // Property & Method
+        // programmer : egoing
+        // designer : leezche
+        // bookkeeper : duru
+        // data scientist : taeho
+        // showAll : function(){ for(var key in this){ document.write(key+' : '+this[key]+'<br>'); } }
+    </script>
+
+</body>
+</html>

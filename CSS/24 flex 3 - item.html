@@ -1,0 +1,67 @@
+<!-- container와 item 중 item에 입력되어야 하는 flex속성을 알아본다.
+
+item의 flex속성_
+flex-grow속성으로 container영역을 각 아이템들에 배분시키는 정도를 설정.
+flex-basis는 각 아이템의 기본크기지정.
+flex-shrink는 브라우저 창 크기를 줄였을 때
+각 아이템의 flex-basis의 크기 감소 정도를 결정. -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .container{
+        background-color: powderblue;
+        height:200px;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .item{
+      background-color: tomato;
+      color:white;
+      border:1px solid white;
+      /* flex-grow:1; */
+    }
+    /* flex-grow (기본일 경우 컨텐트 크기만하며, 값은 0)
+    ->item의 영역이 커지는데, container영역을 item들이 나눠갖게 됨. */
+
+    .item:nth-child(1){
+      flex-basis: 150px;
+      flex-shrink:2;
+    }
+    .item:nth-child(2){
+      /* flex-basis: 200px;
+      flex-grow:3; */
+      flex-basis: 300px;
+      flex-shrink:4;
+    }
+    .item:nth-child(3){
+      /* flex-basis: 200px;
+      flex-grow:3; */
+      flex-basis: 200px;
+      flex-shrink:0;
+    }
+    /* .item:nth-child(2)
+    item을 클래스값으로 갖는 태그 중 두번째 엘리먼트를 선택하는 선택자 */
+    /* flex-basis: 200px; 기본크기지정 */
+    /* 브라우저 창의 크기를 줄일 때 container영역이 먼저 줄어들고
+    container가 모두 줄어들었을 떄 창크기를 더 감소시키면
+    item영역을 어떻게 변화할지를 flex-shrink로 설정할 수 있음.
+    flex-shrink값이 0일 경우 해당 아이템의 컨텐트를 제외한 여백(flex-basis의 크기)이
+    줄어들지 않고 다른 아이템들이 가려져버림.
+    flex-shrink값이 1 이상일 경우 해당 아이템의 여백(flex-basis의 크기)이 줄어들게 됨.
+    숫자가 커질 수록 더 빠르게 줄어들게 됨. */
+    flex-grow
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <div class="item">5</div>
+  </div>
+</body>
+</html>

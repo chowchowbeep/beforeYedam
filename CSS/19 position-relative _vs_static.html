@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+        html{
+			border:1px solid gray;
+	    }
+        div{
+            border:5px solid tomato;
+            margin:100px;
+        }
+        #me{
+            position: relative;
+            left:100px;
+            top:100px;
+        }
+        /* position type은 정적인static 것이 css의 기본값.
+        type이 상대적인relative 것으로 설정될 경우
+        각 태그의 위치를 이동시킬 수 있음  */
+		
+        /* relative는 부모태그에 대해 상대적인 것임.
+        ex. 부모태그를 기준으로 좌로 얼마나 이동하는지 */
+		
+		/* offset : left(좌로부터 얼마만큼 이동), right, top, bottom
+        left와 right중에서는 left, top과 bottom 중에서는 top이 우선적용 */
+    </style>
+  </head>
+  <body>
+    <div id="other">other</div>
+    <div id="parent">
+       parent
+       <div id="me">me</div>
+    </div>
+  </body>
+</html>

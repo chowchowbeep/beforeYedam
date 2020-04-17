@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <!-- 자바스크립트 파일을 다운로드받아서 코드를 카피하고, 
+        이를 js파일로 만들어서 src로 연결해도 됨. -->
+    <!-- 크롬 개발자 도구에서 js파일이 정상적으로 include되었는지 확인 가능 -->
+</head>
+<body>
+    <ul id="list">
+        <li>empty</li>
+        <li>empty</li>
+        <li>empty</li>
+        <li>empty</li>
+    </ul>
+    <input id="execute_btn" type="button" value="execute" />
+    <script type="text/javascript"> // type부분은 생략가능
+        // jQuery는 항상 $기호로 시작함.
+        $('#execute_btn').click(function(){ 
+            //id값이 execute_btn인 태그를 클릭하면 다음의 함수실행
+            $('#list li').text('coding everybody'); 
+            //id값이 list인 태그에 속한 li태그의 문자를 coding everybody로 변경
+        })  
+        // $('').click(function(){$('').text('');})
+    </script>
+
+    <!-- jQuery없이 이를 수행하게 하려면 엄청나게 많고, 불완전한 코드를 입력해야 함. -->
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!-- 콘솔에서 입력
+
+[변수]
+	변수(Variable)는 (문자나 숫자 같은) 값을 담는 컨테이너.
+	값을 유지할 필요가 있을 때 사용.
+	여기에 담겨진 값은 다른 값으로 바꿀 수 있다.
+	변수의 이름은 $, _, 혹은 특수 문자를 제외한 모든 문자로 시작할 수 있다.
+
+[변수의 선언]
+	javaScript에서 변수는 var로 시작.	var은 변수선언을 의미.
+	var을 생략 할수도 있지만 이것은 유효범위라는 것에 영향을 미친다.
+	그렇기 때문에 var의 의미를 명확하게 이해하기 전까지는 var를 사용하는 것이 권장된다.
+	유효범위에 대해서는 뒤에서 살펴볼 것이다.
+
+	실습
+		var a = 1;
+		alert(a+1);  //2
+		var a = 2;
+		alert(a+1);  //3
+
+		※ 변수의 값이 꼭  숫자만 올 수 있는 것은 아니다.
+		var first = "coding";
+		alert(first+" everybody");
+		변수 a에 coding ,변수 b에 everybody를 활당하는 방법은 아래와 같다.
+
+		var a = 'coding', b = 'everybody';
+		alert(a);
+		alert(b);
+
+
+[변수와 대입연산자]
+	x = 1; 엔터 > 1
+	여기서
+	x 는 변수 variable
+	= (우측 항의 값을 좌측 변수에 대입시키는 연산자)은 대입연산자
+	대입연산자 앞에 var을 붙이는 습관들이기
+
+
+[상수]
+	1=2; >VM1149:1 Uncaught ReferenceError: Invalid left-hand side in assignment
+	여기서
+	1은 상수 constant (항상 일정한 수)
+	서로 다른 상수를 =해서 에러 표시됨
+
+
+[name 이라는 대입연산자 이용예제]
+	shift + enter 누르면 줄바꿈 가능
+
+	var name ="cho";
+	alert("Lorem ipsum dolor sit amet, "+name+" consectetur adipisicing elit.  "+name+" Eos consectetur est amet sit modi ullam  "+name+" libero voluptas ipsa ratione vitae officiis,  "+name+" autem explicabo qui, eaque vel. Dolorum beatae cupiditate, unde.")
+
+	> +name+ 부분에 cho라는 문자가 대입된 글이 이벤트창으로 팝업됨.
+	수많은 특정문자를 한꺼번에 변경할 일이 있을 때 이용할 수 있음.
+
+	> "Lorem ipsum dolor sit amet, "
+	와
+	" consectetur adipisicing elit.  "+name+" Eos consectetur est amet sit modi ullam  "+name+" libero voluptas ipsa ratione vitae officiis,  "+name+" autem explicabo qui, eaque vel. Dolorum beatae cupiditate, unde."
+	의 가운데에
+	+name+ 변수 name의 데이터를 삽입하여 알림창을 띄운다. -->

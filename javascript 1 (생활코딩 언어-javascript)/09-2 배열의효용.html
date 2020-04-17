@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 함수는 원래 하나의 값만을 반환가능.but 배열을 이용하면 여러값반환가능.
+        function get_members(){
+            return ['egoing', 'k8805', 'sorialgi']; // 배열을 리턴해줌
+        }
+        var members = get_members(); // 함수에서 리턴한 배열을 변수에 대입?
+        document.write(members[0]+"<p>"); // 배열에서 각 인덱스에 해당하는 정보 찾아 출력
+        document.write(members[1]+"<p>");
+        document.write(members[2]+"<p>");
+    </script>
+</body>
+</html>

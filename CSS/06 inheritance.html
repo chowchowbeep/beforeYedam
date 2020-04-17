@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>상속</title>
+  <!-- 상속 : 상위 엘리먼트의 속성값을 하위엘리먼트에도 동일하게 적용 -->
+  <style>
+    /*
+    h1{color:yellow;}
+    ul{color:yellow;}
+    상기내용을 아래와 같이 상속의 원리로 적용할 수 있음
+    */
+    html{color:yellow;}
+    
+    #brown{color:brown;}
+    /* html전체에 상속의 원리로 공통된 스타일을 적용
+    적은 코드로 넓게 적용가능
+    예외가 있을 경우 id값을 이용하여 개별적으로 스타일적용 */
+
+    body{border : solid 1px black;}
+    /* 테두리는 상속이 적용되지 않음
+    상속하는 것이 효율적인 속성인 경우에만 적용됨
+    상속여부목록(css2)  https://www.w3.org/TR/CSS21/propidx.html */
+
+  </style>
+</head>
+<body>
+  <h1>수업내용</h1>
+  <ul>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li id="brown">JAVA SCRIPT</li>
+  </ul>
+</body>
+</html>

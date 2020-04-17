@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+        body{
+          padding-top: 30px;
+        }
+        /* -> #me가 상단에 고정되면서 가려지는 부분이 없도록 위로
+        padding 값을 줘서 영역확보 */
+        #parent, #other{
+            border: 5px solid green;
+        }
+        #large{
+            height:10000px;
+            background-color:green;
+        }
+        /* ->스크롤을 만들기 위해 설정한 스타일. */
+        #me{
+            background-color: black;
+            color: white;
+            position: fixed;
+            left:0;
+            top:0;
+            width:100%;
+            height:30px;
+            text-align: center;
+        }
+        /* position type이 fixed일 경우 absolute와 같이
+        부모와의 관계가 관계가 끊겨서 부모태그의 속성을 상속받지 못함.
+        (스타일이 컨텐트에만 적용됨. 크기는 width height로 직접 지정해야 함.)
+        또한 스크롤시 위치가 고정되어 있게 됨. */
+
+    </style>
+  </head>
+  <body>
+    <div id="other">other</div>
+      <div id="parent">
+         parent
+         <div id="me">me</div>
+      </div>
+    <div id="large">large</div>
+  </body>
+</html>

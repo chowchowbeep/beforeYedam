@@ -1,0 +1,6 @@
+h1{
+  color:tomato;
+}
+
+/* 또다른 css파일을
+@import url();을 이용하여 css와 css 연결할 수도 있음 */

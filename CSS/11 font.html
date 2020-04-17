@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>font</title>
+  <style>
+    #font1{
+      font-size: 5rem;
+      font-family: arial, verdana, "helvetica neue", monospace;
+      /* 폰트이름에 빈칸이 포함된 경우 따옴표 안에 묶어줘야 함 */
+      /*
+      css에서 지정한 폰트가 사용자의 컴퓨터에 없는 경우
+      폰트의 속성을 지정하여 설치되어 있는 폰트 중 해당속성을
+      가진 폰트를 출력시킬 수 있음.
+
+      폰트속성
+      - serif
+      - sans-serif
+      - cursive (흘림체)
+      - fantasy
+      - monospace (고정폭)
+      */
+      /*
+      https://opentutorials.org/module/2367/13361
+      */
+
+      font-weight: bold;
+      line-height: 2;
+      /* 행간지정시 글자크기의 배율지정가능.
+      고정 픽셀로도 지정할 수 있지만
+      글자크기가 변경될 가능성을 고려해야 함.  */
+    }
+
+    /* 폰트와 관련된 여러 속성을 축약형으로 표현하는 속성입니다.
+    형식은 아래와 같습니다. 순서를 지켜서 기술하셔야 합니다.
+	  
+    font: font-style font-variant font-weight font-size/line-height font-family
+    |caption|icon|menu|message-box|small-caption|status-bar|initial|inherit;  */
+	  
+    /* {font-weight font-size/line-height font-family} */
+    #font2{
+      font: bold 5rem/2 arial, verdana, "helvetica neue", monospace
+    }
+
+
+
+
+
+
+  </style>
+</head>
+<body>
+  <p id="font1">
+    Hello World<br>
+    Hello World
+  </p>
+  <p id="font2">
+    Hello World<br>
+    Hello World
+  </p>
+
+
+</body>
+</html>

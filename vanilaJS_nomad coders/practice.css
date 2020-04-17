@@ -1,0 +1,18 @@
+body {
+    background-color:gray;
+}
+
+h1 {
+    color:burlywood;
+}
+
+/* 기본적으로 form과 greeting을 안 보이게 */
+.form,
+.greeting {
+    display:none;
+}
+
+/* JS를 이용하여 form과 greeting을 block속성으로 보이게 만듦  */
+.showing {
+    display:block;
+} 

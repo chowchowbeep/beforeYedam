@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html lang='en'>
+<head>
+<!--
+	14 에서 입력한 코드에서 중복을 제거(리팩토링)하여
+	보다 경제적(데이터 양의 감소)이고 
+	효율적인(유지보수 용이, 가독성 향상) 데이터로 만들기. 
+	우리는 축약된 코드를 통해 더 많은 것을 할 수 있게 됨.
+-->
+  <title>WEB1 - Welcome</title>
+  <meta charset="utf-8">
+</head>
+<body>
+  <h1><a href="index.html">WEB</a></h1>
+  
+  <input id="night_day" type="button" value="night" onclick="
+   var target = document.querySelector('body');
+   if(this.value === 'night'){
+   	target.style.backgroundColor = 'black';
+    target.style.color = 'white';
+    this.value = 'day';
+   } else {
+    target.style.backgroundColor = 'white';
+    target.style.color = 'black';
+    this.value = 'night';
+   }
+  ">
+
+  <ol>
+    <li><a href="1.html">HTML</a></li>
+    <li><a href="2.html">CSS</a></li>
+    <li><a href="3.html">JavaScript</a></li>
+  </ol>
+  <h2>WEB</h2>
+  <p>The World Wide Web (abbreviated WWW or the Web) is an information space where documents and other web resources are identified by Uniform Resource Locators (URLs), interlinked by hypertext links, and can be accessed via the Internet.[1] English scientist Tim Berners-Lee invented the World Wide Web in 1989. He wrote the first web browser computer program in 1990 while employed at CERN in Switzerland.[2][3] The Web browser was released outside of CERN in 1991, first to other research institutions starting in January 1991 and to the general public on the Internet in August 1991.
+  </p>
+	
+  <input type="button" value="night" onclick="
+   var target = document.querySelector('body');
+   if(this.value === 'night'){
+   	target.style.backgroundColor = 'black';
+    target.style.color = 'white';
+    this.value = 'day';
+   } else {
+    target.style.backgroundColor = 'white';
+    target.style.color = 'black';
+    this.value = 'night';
+   }
+  ">
+  
+<!--
+	  상단의 #night_day와 구분되도록 id값을 night_day2로 지정
+	  (구분하지 않을 경우 javascript코드가 상단의 #night_day에만 적용되는 경우가 생김. id값은 중복이 불가함.)
+
+	  > 코드를 더욱 간결하게 하기 위해서 
+	  document.querySelector('#night_day2')
+	  대신 this 키워드를 입력.
+	  this는 현재의 태그를 선택하도록 함.
+	  
+	  > 코드를 더욱 간결하게 하기 위해서 
+	  document.querySelector('body')를
+	  var target = document.querySelector('body');으로 조건문 앞에 
+	  입력하여 타겟을 body태그로 설정하고,
+	  기존의 document.querySelector('body')자리에
+	  target 키워드를 입력하여 태그를 지시하는 코드를 대입할 수 있게 해 줌.
+	  
+	  상단의 input tag도 마찬가지로 중복제거를 해줌.
+-->
+  
+</body>
+</html>
+

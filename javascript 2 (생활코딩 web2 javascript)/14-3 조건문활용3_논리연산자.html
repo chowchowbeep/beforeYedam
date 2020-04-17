@@ -1,0 +1,50 @@
+<!-- 논리연산자는 조건문을 보다 간결,다양하게 구사하게 해줌. -->
+<!-- javascript - 조건문 참고 -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+</head>
+<body>
+  <!--
+  [ && and연산자 ]
+    &&는 좌항과 우항이 모두 참(true)일 때 참이된다.
+    예제
+      <script>
+          id = prompt('아이디를 입력해주세요.');
+          password = prompt('비밀번호를 입력해주세요.');
+          if(id=='egoing' && password=='111111'){
+            // id의 값이egoing이고 password가 111111dlaus 참이다.
+            // 14-2에서의 if문의 중복을 제거함.
+              alert('인증 했습니다.');
+          } else {
+              alert('인증에 실패 했습니다.');
+          }
+      </script>
+
+
+  [ || or연산자 ]
+    여러 항 중 하나라도 true면 true.
+    예제
+      <script>
+        id = prompt('아이디를 입력해주세요.');
+        password = prompt('비밀번호를 입력해주세요.');
+        if((id==='egoing' || id==='k8805' || id==='sorialgi') && password==='111111'){
+            alert('인증 했습니다.');
+        } else {
+            alert('인증에 실패 했습니다.');
+          }
+      </script>
+      // or연산자와 and연산자 혼합. 괄호묶기에 주의.
+      //  연산순서(사칙연산처럼 내부 괄호 먼저 계산)
+      // 1 (id=="egoing" or id=="k8805" or id=="sorialgi") : true
+      // 2 password=='111111' : true
+      // 3 true(1항) and true(2항) : true
+
+    [! not연산자 ]
+      '!'는 부정의 의미, Boolean의 값을 역전시킨다.
+      true를 false로 false를 true로.
+
+  -->
+</body>
+</html>

@@ -1,0 +1,41 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Object</title>
+    </head>
+    <body>
+        <h1>Object</h1>
+        <h2>Create</h2>
+        <script>
+            var coworkers ={
+                "programmer":"egoing",
+                "designer":"leezche"
+            };
+            document.write("programmer : "+coworkers.programmer+"<br>");
+            document.write("designer : "+coworkers.designer+"<br>");    
+            coworkers.bookkeeper = "duru";// 객체에 데이터 추가
+            document.write("bookkeeper : "+coworkers.bookkeeper+"<br>")    
+            coworkers["data scientist"] ="taeho";// 객체에 데이터 추가
+            document.write("data scientist : "+coworkers["data scientist"]+"<br>")
+        </script>
+        <h2>Iterate</h2>
+        <script>
+            //for(var변수 in객체)for in문
+            //=> 변수(객체)coworkers의 key들을 var key에 차례로 대입
+            for(var key in coworkers){ 
+                document.write(key+" : "+coworkers[key]+"<br>");
+            }
+            // for반복문과 객체의 조합. 
+         
+            // 다음과 같이 출력됨
+            // Iterate
+            // programmer : egoing
+            // designer : leezche
+            // bookkeeper : duru
+            // data scientist : taeho
+        </script>
+    </body>
+    </html>

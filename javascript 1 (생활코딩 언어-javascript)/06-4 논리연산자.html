@@ -1,0 +1,34 @@
+<!-- 논리연산자는 조건문을 보다 효율적으로 사용할 수 있게 해 줌. -->
+
+<!-- ex 1) && and연산자 -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+</head>
+<body>
+    <script>
+        var id = prompt('아이디를 입력해주세요.');
+        var password = prompt('비밀번호를 입력해주세요.'); //변수를 밖으로 꺼냄
+        if(id==='egoing' && password==='111111'){ 
+            // && and연산자 좌항 우항 모두true여야  true
+            alert('인증 했습니다.');
+        } else {
+            alert('인증에 실패 했습니다.');
+        }
+    </script>
+</body>
+</html>
+<!-- ex 2) || or 연산자를 이용한 예제 개선 -->
+    <!--
+    id = prompt('아이디를 입력해주세요.');
+    password = prompt('비밀번호를 입력해주세요.');
+    if((id==='egoing' || id==='k8805' || id==='sorialgi') && password==='111111'){
+        // || or연산자 어떤 값이라도 true면 true
+        alert('인증 했습니다.');
+    } else {
+        alert('인증에 실패 했습니다.');
+    }
+    
+    더 안쪽에 위치한 괄호부터 먼저 계산(사칙연산과 동일)
+    -->

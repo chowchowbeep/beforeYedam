@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>typography_color</title>
+  <style>
+    ul{
+      color:#ff0000;
+    }
+    #tomato{
+      color:tomato;
+    }
+    li.melon{
+      color:rgb(60,179,113)
+    }
+  </style>
+</head>
+<body>
+  <h1 class="melon">멜론느어디에</h1>
+  <!-- 클래스값이 melon인 li태그에만 스타일이 적용되어있음 -->
+  <ul>
+    <li>사과사과</li>
+    <li id="tomato">토마토마토</li>
+    <li class="melon">멜론느</li>
+  </ul>
+
+</body>
+</html>
+
+<!--
+  컬러 입력방식
++ COLOR NAME
+  EX.{color:red;}
++ HEX _hexadecimal
+  EX.{color:#ff0000}
+
+ + RGB _red,green,blue
+  EX.{color:(256,0,0)} 특정색상에서 r,g,b 빛의 정도를 0~256 사이 단계로 표현
++ HSL _hue,saturation,lightness
+  EX.{color:hsl(0,100%,50%)} 
+  
++ RGBA _rgb값에 alpha값(투명도 표현)이 추가됨
+  EX.{color:rgba(256,0,0,0.5)}
++ HSLA _hsl값에 alpha값(투명도 표현)이 추가됨
+  EX.{color:hsal(0,100%,50%,0.5)}
+
+ 상세 참조
+ http://www.w3schools.com/css/css_colors.asp
+ -->

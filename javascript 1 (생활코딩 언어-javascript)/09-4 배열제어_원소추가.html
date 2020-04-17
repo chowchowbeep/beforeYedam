@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 배열에 원소를 추가시키는 내장함수들
+
+        var li = ['a', 'b', 'c', 'd', 'e'];
+        li.push('f'); // 변수li의 배열 끝에 원소를 추가. 
+        alert(li);
+
+        var li = ['a', 'b', 'c', 'd', 'e'];
+        li = li.concat(['f','g']); // 변수li의 배열 끝에 복수의 원소를 추가. 
+        // li = 주의. 
+        alert(li);
+
+        var li = ['a', 'b', 'c', 'd', 'e'];
+        li.unshift('z'); // 변수li의 배열의 맨 앞에 원소 추가. 인덱스도 변경됨.
+        alert(li);
+
+        var li = ['a', 'b', 'c'];
+        li.splice(1, 1, 'x', 'y'); // (index, howmany, '문자열', '문자열')
+        // 배열내 특정index 선정하고, 
+        // 그 인덱스로부터 왼쪽향해서 삭제할 데이터 갯수를 정해 삭제하고 (삭제안하려면0)
+        // 삭제된 인덱스 자리에 원소들 추가
+        alert(li); // a,x,y,c 경고창
+    </script>
+</body>
+</html>

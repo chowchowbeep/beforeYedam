@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <ul> <!--  자바스크립트를 이용해 목록생성. 프로그래밍적으로 html을 제어.  -->
+        <script>
+            var grades = {'egoing': 10, 'k8805': 6, 'sorialgi': 80};
+            for(var name in grades) { // for in문(배열에서도 사용가능)
+// 객체grades 안에 있는 key들을 반복문 실행될 때마다 하나씩 name변수에 적용하여 다음을 실행
+// 가져온 변수를 통해 값을 출력. 
+// name은 변수로 가져온 key값 그대로, grades[name]는 value값을 출력
+                document.write("<li>"+"key : "+name+", value : "+grades[name]+"</li>");
+            } 
+//  자바스크립트 이용해 목록생성. 스크립트를 ul로 감싸고 그 안에 li로 데이터 감싸줌.
+
+
+    // 결과
+    // key : egoing, value : 10  //name 변수 = grades의 첫 번째 key 'egoing'
+    // key : k8805, value : 6  //name 변수 = grades의 두 번째 key 'k8805'
+    // key : sorialgi, value : 80  //name 변수 = grades의 세 번째 key 'k8805'
+    // -> 개발자도구로 검사해보면 li태그로 묶여있음
+        </script>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>margin-collapsing 2</title>
+  <style>
+    #parant{
+/*      border:1px solid tomato; */
+      margin-top:100px;
+    }
+    #child{
+      background-color: powderblue;
+      margin-top:50px;
+    }
+    /* #parant와 #child의 마진겹침
+    #parant와 #child 중 마진값이 더 큰 것이 적용됨.
+    #parant의 border같은 시각요소가 설정된 경우 마진겹침 X */
+  </style>
+</head>
+<body>
+  <div id="parant">
+    <div id="child">Hello World</div>
+  </div>
+  <!-- #parant>#child 를 입력하고 탭을 누르면 emmet기능에 의해
+  id값이 parant인 div태그와 그아래 id값이 child인 div태그가 상속된 형태가 생성 -->
+</body>
+</html>

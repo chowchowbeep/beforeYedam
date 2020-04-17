@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <form action='https://localhost/login.php'>
+      <!-- 아래 태그로 입력된 칸들을 field 혹은 control이라고 부름  -->
+      <p>ID<input type="text" name='id'></p>
+      <p>PW<input type="password" name='pwd'></p>
+      <!-- type속성을password로 지정하면 입력하는 문자가 점으로만 노출됨 -->
+      <p>ADD<input type="text" name='address'></p>
+      <input type="submit">
+  <!-- input type='submit'으로 삽입된, 제출버튼을 누르면 액션 속성의 주소로 이동함 -->
+  <!-- https://localhost/login.php?id=&pwd=&address=
+  name속성으로 인해 이퀄기호 뒤에 입력한 값이 표시됨 -->
+    </form>
+  </body>
+</html>
+
+
+<!-- 요약
+<form action="">
+  <p>id<input type="text" name="id"></p>
+  <p>pw<input type="password" name="id"></p>
+  <input type="submit">
+</form>
+ -->

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>array & loop</title>
+</head>
+<body>
+	<h1>Loop & Array</h1>
+	<script>
+		var fruits = ['melon','mango','apple','banana'];
+//	① 변수를 지정하고 배열(순서대로 데이터를 정리)을 생성하여 스크립트짜기
+	</script>
+	
+	<h2>fruits</h2>
+<!-- ② ul안에 script 입력할 것임. 
+script에는 조건문의 i를 위한 variable과 while 조건문 입력 -->
+	<ul>
+	<script>
+// ③ variable입력		
+		var i = 0;
+// ④ while()괄호 내 입력된 조건 충족되는 한 {}내의 코드를 반복실행하도록	
+        while(i < fruits.length){
+//  while(1 < 배열에 속한 elements 갯수)여야 
+/*	각 엘리먼트를 순서대로 한번씩만 반환.
+		i=i+1을 element갯수만큼 반복시, i<element갯수는 거짓이 되어 
+		더이상 반환 할 것이 없기 때문. */
+/*	fruits변수의 데이터 갯수는 fruits.length로 구할 수 있음. while(i<4) 
+배열 내 엘리먼트가 추가되어도 이 부분은 수정하지 않아도 됨.	*/
+/*
+document.write(<li><a href="http://a.com/fruits[i]">fruits[i]</a></li>);
+ => li 태그의 fruits[0]에 a태그가 들어가서
+하이퍼링크를 클릭하면 http://a.com/melon 으로 접속됨. 
+ => 다음과 같이 배열에서 불러오는 fruits[i]를 '',"",+를 이용하여 다른 코드와 연결시킴
+*/
+			document.write('<li><a href="http://a.com/'+fruits[i]+'">'+fruits[i]+'</a></li>');
+			i = i + 1;
+//i 갯수 1 증가, 다시 조건문 확인하고 충족되면 반복.
+		}  // while 반복문 닫음
+    </script>
+	</ul>
+</body>
+</html>
+
+
+
+
+

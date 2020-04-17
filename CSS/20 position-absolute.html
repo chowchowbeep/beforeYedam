@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+        #parent, #other, #grand{
+            border: 5px solid tomato;
+        }
+        #grand{
+            position: relative;
+			left:50px;
+        }
+        /* #parent{
+          position: relative;
+        } */
+
+        #me{
+            background-color: black;
+            color: white;
+            position: absolute;
+            left:30px;
+            top:0;
+        }
+        /* 하위태그의 position이 absolute일 경우
+        부모와의 관계가 관계가 끊겨서 부모태그의 속성을 상속받지 못함.
+        (스타일이 컨텐트에만 적용됨. 크기는 width height로 직접 지정해야 함.)
+        position값이 static이 아닌 조상태그가 나타나면
+        그것을 기준으로 위치가 정해짐.
+
+        이때 상위로 계속해서 거슬러 올라가도
+        position값이 static이 아닌 태그가 없을 경우
+        전체 html태그가 위치의 기준이 됨.  */
+    </style>
+  </head>
+  <body>
+    <div id="other">other</div>
+    <div id="grand">
+      grand
+      <div id="parent">
+         parent
+         <div id="me">me</div>
+      </div>
+    </div>
+  </body>
+</html>

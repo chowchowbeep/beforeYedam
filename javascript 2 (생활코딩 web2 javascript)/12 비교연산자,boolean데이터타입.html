@@ -1,0 +1,91 @@
+<!-- 비교연산자, datatype boolean -->
+
+<!--
+	[비교연산자comparison operatior] (=는 대입연산자)
+		=> javascript - 비교 참고
+		==는 동등연산자 (의미적으로 동등?)
+		===는 일치연산자 (데이터형까지 같아야 정확하게 일치한다고 판단- 사용권장)
+		동등연산자와 일치연산자의 비교
+			alert(null == undefined);       //true
+			alert(null === undefined);      //false
+			alert(true == 1);               //true
+			alert(true === 1);              //false
+			alert(true == '1');             //true
+			alert(true === '1');            //false
+
+			alert(0 === -0);                //true
+			alert(NaN === NaN);             //false
+
+
+	[boolean]
+		비교연산자의 결과는 true, false 두 가지로만 출력됨.
+		이때 이렇게 단 두 가지로 구성되는 datatype을 boolean이라고 함.
+
+
+	[boolean의 대체제]
+		=> javascript - 조건문 참고
+
+		0 : false, 0이 아닌값 true
+				if(0){
+			    alert(1)
+				} // false.
+				if(1){
+				    alert(2)
+				} //true
+
+		기타 false로 간주되는 데이터형('',undefined,var a,null,Nan)
+		! not연산자가 있으므로 false값이 true로 전환되어 alert표시
+				if(!''){
+				alert('빈 문자열')
+				}
+				if(!undefined){
+				alert('undefined');
+				}
+				var a;
+				if(!a){
+				alert('값이 할당되지 않은 변수');
+				}
+				if(!null){
+				alert('null');
+				}
+				if(!NaN){
+				alert('NaN');
+				}
+
+
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<h1>Comparison operators & Boolean</h1>
+	<h2>===</h2>
+
+	<h3>1===1</h3>
+	<script>
+		document.write(1===1);
+		// true출력
+	</script>
+
+	<h3>1===2</h3>
+	<script>
+		document.write(1===2);
+		// false출력
+	</script>
+
+	<h3>1&lt;2</h3>
+	<!-- 해석: 1 is less than 2-->
+	<script>
+		document.write(1<2); // 1<2 true
+	</script>
+
+	<h3>1&lt;1</h3>
+	<script>
+		document.write(1<1); // 1<1 false
+	</script>
+</body>
+</html>

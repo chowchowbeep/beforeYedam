@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>box-sizing</title>
+  <style>
+    *{
+      box-sizing:border-box;
+    }
+    /* 별표*는 universal selector. 모든 태그에 적용됨 */
+    div{
+      margin:10px;
+    }
+    #small{
+      border:10px solid black;
+      width:150px;
+    }
+    #large{
+      border:30px solid black;
+      width:150px;
+    }
+    /* 사이즈 조절하는 속성width는 각 컨텐트를 기준으로 적용됨
+    -> small과 large의 보더 굵기가 다르면 width의 값이 동일해도 border를 포함한
+    전체 넓이는 서로 다르게 됨.
+    -> box-sizing하는 방식을 border-box로 설정하면 width값은
+    border를 포함한 전체넓이가 됨. 따라서 small과 large의 넓이가 같아짐 */
+  </style>
+</head>
+<body>
+  <div id="small">Hello</div>
+  <div id="large">Hello</div>
+</body>
+</html>

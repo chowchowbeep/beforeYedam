@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>가상클래스 선택자</title>
+  <style>
+    /* 어떠한 태그가 상황에 따라 마치 특정한 클래스값을 갖는 것처럼
+      (가상클래스) 스타일을 적용시킴.  */
+
+    /* a 태그 전체 중에서 방문내역이 있는 것이 있다면
+    가상클래스값으로 link를 취하여 스타일 적용 */
+
+    /* 가상선택자 종류 (클래스 속성값 입력하지 않아도
+    특정상황이 속성값이 되는 것처럼 스타일이 적용됨 )
+    :link - 방문한 적이 없는 링크
+    :visited - 방문한 적이 있는 링크
+    :hover - 마우스를 롤오버 했을 때
+    :active - 마우스를 클릭했을 때
+    :focus - tab키로 선택 or 클릭으로 커서 표시 등
+     포커싱되었을 때  */
+
+    a:link{
+      color:green;
+    }
+    a:visited{
+      color:gray;
+    }
+    a:hover{
+      color:blue;
+    }
+    a:active{
+      color:red;
+    }
+    a:focus{
+      background-color:powderblue;
+    }
+
+
+    input:focus{
+      background-color:black;
+      color:white;
+    }
+    /* 모든input 태그 중 포커싱된 부분만 스타일적용 */
+    /* 스타일 적용은 먼저 입력된 것 우선 적용
+    가상클래스 focus는 주로 뒤 쪽에 입력됨 */
+
+  </style>
+</head>
+<body>
+  <a href="http://opentutorials.org">방문함</a>
+  <a href="http://a.a">방문안함</a>
+
+  <input type="text">
+</body>
+</html>

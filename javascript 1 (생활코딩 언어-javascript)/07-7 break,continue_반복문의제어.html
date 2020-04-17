@@ -1,0 +1,23 @@
+<!-- 반복문을 언제까지 반복할 것인가?/ 반복문에서 스킵하고 싶은 부분이 있을 때 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        for(var i = 0; i <10; i++){
+            if(i === 5) {
+                // break; //i가 5일 때 해당조건에서 for문의 코드를 정지함
+                continue //해당조건에서 for문의 코드를 스킵. 나머지 조건을 확인하고 코드를 실행함.
+            }
+            document.write('Coding Everybody '+i+'</br>');
+        }
+        
+    </script>
+</body>
+</html>

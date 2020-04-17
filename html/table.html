@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <table border='2'><!-- <table></table>태그로 감싸줘야 함 -->
+      <!-- table head와 table body를 분리해 구조를 인식시켜 줘야 함 -->
+      <thead>
+        <tr><!-- table row -->
+          <th>이름</th>  <th>성별</th>  <th>주소</th>  <th>회비</th>
+          <!-- table header cell -->
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>애옹이</td>  <td>아옹</td>  <td rowspan='2'>서울</td> <td>2000</td>
+          <!-- table data cell -->
+          <!-- rowspan으로 2개의 행row을 병합함(수직병합)
+          이 때, 병합대상이 되는 td는 지워줘야 함  -->
+        </tr>
+        <tr>
+          <td>김초롱</td>  <td>여</td>  <td>2000</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan='3'>합계</td>  <td>4000</td>
+          <!-- colspan으로 3개의 열column을 병합함(수평병합)
+          이 때, 병합대상이 되는 td는 지워줘야 함  -->
+        </tr>
+      </tfoot>
+      <!-- thead, tbody, tfoot은 순서가 바뀌어도 위아래 위치를 알아서 인식함 -->
+      <!-- table tag는 과거 웹페이지 레이아웃생성에도 이용됐었음 -->
+     </table>
+   </body>
+</html>

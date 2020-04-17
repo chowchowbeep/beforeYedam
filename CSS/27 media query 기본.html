@@ -1,0 +1,53 @@
+<!-- 반응형디자인의 시작, 미디어쿼리.
+조건을 정하고 그 내부에 적용할 css코드를 입력 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>media query</title>
+  <style>
+    /* @media로 미디어쿼리 선언. 괄호 내에 조건 입력? */
+    /* @media {}내에 선택자와 그에 대한 스타일을 입력 */
+
+    @media (max-width:600px){
+      body{
+        background-color: green;
+      }
+	  li{
+	    color:yellow;
+		}
+    }
+    @media (max-width:500px){
+      body{
+        background-color: beige;
+      }
+	  li{
+		color:brown;
+		}
+    }
+    /* cascading에 따라 "나중에" 입력한 것이 "우선" 적용  */
+
+    @media (min-width:601px){
+      body{
+        background-color: lightskyblue;
+      }
+	  li{
+		color:tomato;
+		}
+    }
+    /* 크롬 우클릭 - 검사 - 모바일아이콘 - 해상도 변경해볼 수 있음
+    responsive가 반응형 - 점세개 - show media query를 이용하여
+    보다 수월하게 적용가능 */
+
+
+  </style>
+</head>
+<body>
+  <ul>
+    <li> ~500px : red </li>
+    <li> 501~600px : green </li>
+    <li> 601~ : blue </li>
+  </ul>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!-- 속성값이 변할 때 자연스럽게 전환되도록 하는 기능. transition -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <style>
+
+    a{
+      font-size:3rem;
+      display:inline-block;
+
+      /* transition-property: font-size transform;
+      트랜지션을 적용할 속성 (복수선택가능)
+
+      transition-duration: 0.1s; 트랜지션지속시간
+
+      transition:all 0.1s;
+      축약형 -> 트랜지션적용할속성 지속시간; 모든 트랜지션 적용 속성을 0.1초 지속
+       */
+
+      transition: font-size 1s, transform 0.1s;
+      /* 축약형 -> 트랜지션 적용 속성과 지속시간을 복수 입력가능 */
+
+      transition-delay:1s;
+      /* 트랜지션 효과 지연시간 설정 */
+    }
+
+    a:active{
+      /* a태그가 클릭되었을 때 다음과 같은 상태가 됨 */
+      transform:translate(20px, 20px);
+      /* x축,y축이 각각 20px,20px만큼 이동 */
+      font-size:2rem;
+    }
+
+    /* 어디에 어떤 속성을 입력하는지 주의깊게 봐둘 것 */
+
+  </style>
+</head>
+<body>
+  <a href="#">click</a>
+</body>
+</html>

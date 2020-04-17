@@ -1,0 +1,40 @@
+<!-- filter기능: 코드를 이용하여 그래픽 대상에 효과를 줄 수 있음
+https://opentutorials.org/module/2367/13665
+https://bennettfeely.com/image-effects/
+https://css-tricks.com/almanac/properties/f/filter/
+https://codepen.io
+참고 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <style>
+    img{
+      transition: all 1s;
+      /* 필터효과를 부드럽게 적용하는 transition
+      모든 효과에 대해 1초동안 장면전환 */
+    }
+    img:hover{
+      /* hover했을 때 필터효과가 적용됨 */
+      -webkit-filter:grayscale(100%) blur(3px);
+      -o-filter:grayscale(100%) blur(3px);
+      filter: grayscale(100%) blur(3px);
+      /* filter가 완전하게 지원되지 않는 브라우저에서는 접두사 필요*/
+    }
+
+    h1{
+      -webkit-filter:blur(3px);
+      -o-filter:blur(3px);
+      filter:blur(3px);
+      /* blur효과의 강도는 px로 지정 */
+      /* 이미지 뿐만 아니라 글자도 filter적용가능 */
+    }
+  </style>
+</head>
+<body>
+  <h1>mountain</h1>
+  <img src="sample.jpg" alt="">
+</body>
+</html>

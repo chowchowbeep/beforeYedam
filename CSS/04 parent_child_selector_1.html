@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>부모자식 선택자</title>
+  <style>
+
+    ul {
+      border:1px solid blue;
+    }
+    /* 모든 ul태그에 테두리적용 */
+
+    ul li{
+      color:green;
+    }
+    /* 조상과 자손 사이에 스페이스바
+    ul의 자손인 li에만 스타일적용 */
+
+    #direct>li{
+      border:1px solid yellow;
+    }
+    /* > 이용
+    id속성값이 direct인 태그의 *직계자손*인 li태그에만 스타일적용
+    id속성값이 direct인 태그 그 자신과,
+    li태그의 자손인 새로운 ol태그에는 스타일이 적용되지 않음*/
+
+    ul,ol{
+      background-color:powderblue;
+    }
+    /* , 이용
+    ul과 ol태그 모두에 스타일적용  */
+
+  </style>
+</head>
+<body>
+    <ul>
+      <li>HTML</li>
+      <li>CSS</li>
+        <ul>
+          <li>selector</li>
+          <li>declaration</li>
+        </ul>
+      <li>JAVA SCRIPT</li>
+    </ul>
+    <ol>
+      <li>HTML</li>
+      <li>CSS</li>
+        <ol>
+          <li>selector</li>
+          <li>declaration</li>
+        </ol>
+      <li>JAVA SCRIPT</li>
+    </ol>
+    <ol id="direct">
+      <li>HTML</li>
+      <li>CSS</li>
+        <ol>
+          <li>selector</li>
+          <li>declaration</li>
+        </ol>
+      <li>JAVA SCRIPT</li>
+    </ol>
+</body>
+</html>

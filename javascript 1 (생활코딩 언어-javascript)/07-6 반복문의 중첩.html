@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        for(var i = 0; i <10; i++){
+            for(var j = 0; j <10; j++){
+                document.write('Coding Everybody '+i+j+'</br>');
+            }
+        }   // 00 01 02 03 04 05 06 07 08 09 10 11 12 13 14 15 ~~
+/* 
+var i=0 -> i<10 -> 
+var j=0 -> 
+j<10 -> document~ -> j++ -> j<10 -> document~ -> j++ ~~~ 변수j for문 완료할 때까지 반복 ->
+i++(i가 1이 됨) -> 1<10 -> var j=0(j는 다시 0으로 초기화) -> j for문 다시 반복 ~~~~
+*/
+    /* 
+    문자와 문자 사이의 숫자 i,j를 javascript에서는 문자로 인식함. 
+    but string명령을 사용할 수도 있음.
+    String은 i와 j에 대입된 숫자 데이터 타입을 문자로 형태를 변환하는 명령이다.
+    String()을 제거하고 실행해보면 의미가 더 분명히 드러날 것이다.
+    document.write(String(i)+String(j)+'<br />');
+    */
+
+    /*
+    디버거 이용
+    chrome inspector - sources 에서 해당 html문서를 선택하고
+    break point를 만들어주기위해 행의 번호를 클릭.
+    그다음 F5눌러서 새로고침하면 paused in debugger 표시됨.
+    그 상태에서 sources창 안에서 아래방향의 화살표를 누르면
+    코드의 행이 아래로 내려가면서 하나씩 순차적으로 코드를 실행시켜 볼 수 있음.
+    watch expressions에서 +버튼을 누르고  i 엔터 j엔터 그 다음
+    화살표를 눌러보면 반복문이 실행되는 동안 i와 j의 수의 증가를 확인가능.
+    */
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        반복문 실행을 가능하게 하는
+        i 변수 초기화 + 반복조건 + while반복실행_i값증가
+ 
+        var i = 0; //i는 iterate의 i
+        while(i < 10){
+            document.write("Coding everybody"+i+"<br />");
+            i = i + 1; 
+        }
+        */
+        /*
+        while문을 하나로 결합하는 것이 for문
+        가독성증가 , 문제발생률 감소.
+        결합방식(마지막엔 ;입력x), 입력순서 중요.
+        for(ⓐ i 변수초기화; ⓑ 조건확인; ⓒ i 변수 변화){
+            ⓓ 반복해서 실행될 코드
+        }  
+
+        ⓐ-> (ⓑ-> ⓓ-> ⓒ)( 괄호 내 순서는 ⓑ결과 false될 때까지 반복 )?
+        */ 
+        for(var i = 0; i < 10; i++){
+            document.write("Codidng everybody"+i+'<br/>');
+        }
+
+
+/*
+        i = i + 1 는 i++나 ++i로 대체.
+        i++ 사용하는 순간에는 i+0 alert실행 후 i+1 한단계 늦음
+            기존값을 사용 후 수 증가. 많이 사용됨.
+        ++i 수 증가 후 증가된 수를 사용
+*/        
+    </script>
+</body>
+</html>

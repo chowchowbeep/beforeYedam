@@ -1,0 +1,38 @@
+<!-- 기본문법. 
+console.log이용하여
+
+객체안에 배열, 그리고 그 배열 안에 객체가 들어갈 수도 있음 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var choInfo = {
+            'name' : "chorong",
+            'age' :29,
+            'favFood' : [
+                {
+                name:"tteokbbokki",
+                spicy:"ture"
+                }
+               , 
+                {
+                name:"cheese stick",
+                spicy:"false"
+                }  
+               ]
+        };
+
+
+    console.log(
+        choInfo.favFood[0].name
+    );
+    </script>
+</body>
+</html>

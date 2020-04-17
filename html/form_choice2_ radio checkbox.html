@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <form action="http://localhost/order.php">
+      <p>
+        <h1>색상(단일선택)</h1>
+        빨강 <input type="radio" name="color" value="red">
+        깜쟝 <input type="radio" name="color" value="black" checked>
+        파랑 <input type="radio" name="color" value="blue">
+	  </p>
+        <!-- 라디오버튼 - 같은 name속성 내에서 하나의 컨트롤을 선택할 수 있음 -->
+        <!-- checked속성은 기본으로 선택되어 있게 해줌. 속성값은 필요없음 -->
+      <p>
+        <h1>사이즈(다중선택)</h1>
+        80 <input type="checkbox" name="size" value="80">
+        90 <input type="checkbox" name="size" value="90" checked>
+        100 <input type="checkbox" name="size" value="100" checked>
+      </p>
+        <!-- 체크박스 - 같은 name속성 내에서 컨트롤을 다중선택가능 -->
+        <input type="submit">
+      </form>
+      
+      <!-- submit을 눌러 서버로 전송시 주소가 다음과 같이 노출됨.
+      http://localhost/order.php?color=black&size=90&size=100 -->
+  </body>
+</html>
+<!-- selcet의 name속성과 option의 value속성이 짝지어지는 것과 달리,
+동일한 name으로 그룹핑된 value input태그들의 서로다른 value속성들이 짝지어지는 것이
+radio,checkbox의 특성  -->

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>margin-collapsing 3</title>
+  <style>
+  #empty{
+      margin-top:50px;
+      margin-bottom: 100px;
+/*      border:1px solid tomato;*/
+  }
+  #normal{
+      background-color: powderblue;
+      margin-top:100px;
+  }
+  </style>
+</head>
+<body>
+<div id="empty"></div>
+<div id="normal">normal</div>
+</body>
+</html>
+<!-- 시각요소가 없다면 위아래 마진겹침이 작용함 -->

@@ -1,0 +1,63 @@
+<!-- 
+객체는 연관된 변수와 함수를 정리해주는 역할을 함.
+함수를 이용해 로직에 이름을 부여함.
+함수까지만 사용했을 때 덜 세련된 상황을 만들어서 객체를 이용해보는 연습 할거임 
+지금 dot.찍어놓은 객체는 작동하지 않음. 객체 수업들을 해보고 
+이것을 작동하도록 해 볼 것임
+완성본은 27 객체예고 실습 참조
+-->
+<!DOCTYPE HTML>
+<html lang='en'>
+<head>
+  <meta charset="utf-8">
+  <script>
+    
+    function LinksSetColor(color){
+      var alist = document.querySelectorAll('a')
+      var i = 0;
+      while(i < alist.length){
+       alist[i].style.color = color;
+       i = i + 1;
+      }
+    }
+    function BodySetColor(color){
+      document.querySelector('body').style.color = color;
+    }
+    function BodySetBackgroundColor(color){
+      document.querySelector('body').style.backgroundColor = color;
+    }
+    function nightDayHandler(self){
+      var target = document.querySelector('body');
+      if(self.value === 'night'){
+       Body.SetBackgroundColor('black');
+       Body.SetColor('white');
+       self.value = 'day';
+
+       Links.SetColor('powderblue');
+
+      } else {
+        Body.SetBackgroundColor('white');
+        Body.SetColor('black');
+        self.value = 'night';
+
+        Links.SetColor('blue');
+      }
+    }
+  </script>
+</head>
+<body>
+  <h1><a href="index.html">WEB</a></h1>
+
+  <input id="night_day" type="button" value="night" onclick="
+    nightDayHandler(this);
+  ">
+  <ol>
+    <li><a href="1.html">HTML</a></li>
+    <li><a href="2.html">CSS</a></li>
+    <li><a href="3.html">JavaScript</a></li>
+  </ol>
+  <h2>WEB</h2>
+  <p>The World Wide Web (abbreviated WWW or the Web) is an information space where documents and other web resources are identified by Uniform Resource Locators (URLs), interlinked by hypertext links, and can be accessed via the Internet.[1] English scientist Tim Berners-Lee invented the World Wide Web in 1989. He wrote the first web browser computer program in 1990 while employed at CERN in Switzerland.[2][3] The Web browser was released outside of CERN in 1991, first to other research institutions starting in January 1991 and to the general public on the Internet in August 1991.
+  </p>
+</body>
+</html>

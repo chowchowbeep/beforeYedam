@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html lang='en'>
+ <head>
+ <!--
+09 에서 day, night버튼을 각각 눌러주었어야 했던 것을
+하나의 토글버튼으로 구현해보기
+-->
+  <title>WEB1 - Welcome</title>
+  <meta charset="utf-8">
+</head>
+<body>
+  <h1><a href="index.html">WEB</a></h1>
+  <input id="night_day" type="button" value="night" onclick="
+   if(document.querySelector('#night_day').value === 'night'){
+   	document.querySelector('body').style.backgroundColor = 'black';
+    document.querySelector('body').style.color = 'white';
+    document.querySelector('#night_day').value = 'day';
+   } else {
+    document.querySelector('body').style.backgroundColor = 'white';
+    document.querySelector('body').style.color = 'black';
+    document.querySelector('#night_day').value = 'night';
+   }
+  ">
+  
+<!--
+  조건문을 만들기 위해서는 우선 html tag의 value속성을 
+  javascript에서는 어떻게 가르키는지를 알아내야 한다.
+  구글에서 'javascript element get value'를 검색하여 관련내용 확인
+-->
+  
+<!-- 
+  해석 (document.querySelector 부분은 생략) :
+  
+  id값이 night_day인 태그의 value값이 night와 같다는 것이 
+  참일 경우 *if true then* *비교연산자,boolean이용됨*
+  다음을 수행한다.
+  바디태그의 스타일 속성에서 백그라운드컬러가 블랙이 되도록 한다.
+  바디태그의 스타일 속성에서 포어그라운드컬러가 화이트가 되도록 한다.
+  id값이 night_day인 태그의 value값이 day와 같아지도록 한다.
+  
+  id값이 night_day인 태그의 value값이 night와 같다는 것이
+  거짓일 경우 *else* 
+  다음을 수행한다.
+  바디태그의 스타일 속성에서 백그라운드컬러가 화이트가 되도록 한다.
+  바디태그의 스타일 속성에서 포어그라운드컬러가 블랙이 되도록 한다.
+  id값이 night_day인 태그의 value값이 night와 같아지도록 한다. 
+-->
+  
+  <!-- 괄호 안 닫힌 부분 없도록 처음부터 여는 괄호와 닫는 괄호 함께 입력 -->
+ 
+  
+  <ol>
+    <li><a href="1.html">HTML</a></li>
+    <li><a href="2.html">CSS</a></li>
+    <li><a href="3.html">JavaScript</a></li>
+  </ol>
+  <h2>WEB</h2>
+  <p>The World Wide Web (abbreviated WWW or the Web) is an information space where documents and other web resources are identified by Uniform Resource Locators (URLs), interlinked by hypertext links, and can be accessed via the Internet.[1] English scientist Tim Berners-Lee invented the World Wide Web in 1989. He wrote the first web browser computer program in 1990 while employed at CERN in Switzerland.[2][3] The Web browser was released outside of CERN in 1991, first to other research institutions starting in January 1991 and to the general public on the Internet in August 1991.
+  </p>
+
+</body>
+</html>

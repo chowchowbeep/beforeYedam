@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--
+  <link rel="stylesheet" href="37 style.css">
+  37 style.css라는 css를 html의 stylesheet로 연결 수 있게하는 link태그
+  -->
+  <style>
+
+     /* h1{color:red;} */
+     /* -> link_2.html에도 동일하게 적용되는 css코드.
+     37 style.css라는 파일에 css코드를 따로 입력해서
+     이를 link태그(style위, head 내에 입력되어 있음)를 이용해 html과 연결함. */
+
+     /* 이렇게 하면 중복제거 가능.
+     중복제거는 유지보수와 코드 이해를 용이하게 하고,
+     데이터를 제공하고 제공받는 입장에서
+     데이터, 시간과 돈을 절약할 수 있게 함 */
+
+      @import url("37 style.css")
+      /* 37 style.css라는 css를 현재 스타일시트 css로 import해옴  */
+  </style>
+  </head>
+  <body>
+    <h1>page1</h1>
+  </body>
+  </html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>#ID 선택자, CLASS 선택자</title>
+  <style>
+    li{
+      color:green;
+      text-decoration:underline;
+    }
+    #select{
+      font-size:300px;
+    }
+    .bluetext{
+      color:blue;
+    }
+    h1.redtext{
+      color:red;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>가나다라</h1>
+  <h1 class="bluetext">가나다라</h1>
+  <h1 class="redtext">가나다라</h1>
+
+  <ul>
+    <!-- h1.redtext 클래스선택자에 해당되지 않음->color:red적용안됨 -->
+    <li class="redtext">HTML</li>
+    <li id="select">CSS</li>
+    <li>JAVA SCRIPT</li>
+  </ul>
+</body>
+</html>
+  <!-- li는 태그선택자 : 모든 li태그에 스타일이 적용됨 -->
+
+  <!-- ID 선택자 : id의 속성값이"select"인 태그를 꾸며주기 위해
+  style tag 내에 #select선택자를 지정 -->
+  <!-- 다음과 같이 #을 생략하면 모든 select tag에 스타일이 적용됨
+  <style>
+    select{
+      font-size:300px;
+    }
+  </style> -->
+
+  <!-- 클래스선택자 01 : class의 속성값이 "bluetext" 모든 태그에 스타일적용됨 -->
+
+  <!-- 클래스선택자 02 : h1태그 class속성값이 "redtext"인 경우에 스타일적용됨
+      h1.redtext{
+      color:red;
+      }
+  모든 class속성값이 redtext인 모든 태그에 적용되지는 않음 -->
+  
+<!--  https://boogis.tistory.com/48 
+  id selector와 class selector의 차이-->
+
+  <!-- 위의 선택자들이 어떤 순서로 입력되든
+   # ID선택자 > .클래스선택자 > 태그선택자 순으로 우선적용 -->

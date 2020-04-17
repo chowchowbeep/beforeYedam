@@ -1,0 +1,88 @@
+데이터타입 Datatype
+     string (문자. "" ''사용.) / number, float / boolean ....
+
+
+변수 Variable
+     변수생성
+     var name = 0; 
+
+     변수 출력
+     alert(name);
+
+
+함수 Function
+     함수 정의 01
+          function name(parameter0,parameter1...){
+               실행코드(조건문 반복문 등 혹은 return '';
+          };
+     함수 정의 02
+          var name = function(){
+          }; 
+
+     함수 호출
+          name(parameter0,parameter1...){return실행코드}; //함수정의
+          alert(name(argument0,argument1...)); //함수호출
+          parameter에 argument제공, 실행코드에도 해당argument 적용. 
+          함수실행으로 반환된 값을 함수호출시 출력함.
+
+
+배열 Array
+     배열생성
+          var name = [element0,element1...];
+
+     엘리먼트 추가 및 제거
+          name.push(''); name.pop(); name.unshift(''); name.shift();  
+          name.splice(index,howmany,'',''...); name = name.concat(['','',,,]); 
+     
+     엘리먼트 정렬
+          name.sort(); name.reverse(); 
+     
+     element 출력
+          name[index] -> alert(name[index]);
+     
+     반복문과의 조합
+
+
+객체 Object
+     객체생성 01 (데이터(properties) 추가를 동시에) 
+          var name = {'key1':value1, 'key2':value2...}; 
+     객체생성 02(데이터는 나중에 따로 추가)
+          var name = {};
+     객체생성 03(데이터는 나중에 따로 추가)
+          var name = new object();
+     
+     데이터 (properties) 추가 
+          name['key1'] = value1; 혹은 
+          name.key1 = value1;
+
+     value 출력
+          name['key1'] -> alert(name['key1']);
+          name.key1 -> alert(name.key1);
+          (※ for(변수in객체){}문 이용시, 객체 내 모든key를 차례대로 변수로 불러옴)
+
+     객체안에 배열, 그리고 그 배열 안에 객체가 들어갈 수도 있음
+          vanila JS강의 01-09~10 Arrays,Object.html파일 참조
+          console.log(
+               choInfo.favFood[0].name
+          );
+     
+     메소드 생성
+          (메소드Method; object 안에 properties로 추가된 function)
+          objectName.functionName = function(){} 혹은
+          var objectName = {
+               "functionName1":
+               function(){
+               }, 
+               "functionName2":
+               function(){
+               }
+          }
+
+     매소드 호출
+          objectName.functionName1(); 혹은
+          objectName["functionName1"()];
+
+     DOM(Document Object Model)
+          html의 모든 요소를 객체화하여 javascript로 제어할 수 있음.
+          vanilaJS강의의 index.js참고 필수
+

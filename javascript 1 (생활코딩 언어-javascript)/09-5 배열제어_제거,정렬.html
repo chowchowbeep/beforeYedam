@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 배열에서 원소를 제거하거나 정렬하는 내장함수들
+        var li = ['a', 'b', 'c', 'd', 'e'];
+        li.shift(); // 배열의 첫 번째 원소 제거. unshift는 배열첫번째에 원소 삽입
+        alert(li); // b,c,d,e
+
+        var li = ['a', 'b', 'c', 'd', 'e'];
+        li.pop(); // 배열의 끝의 원소 제거. push는 배열 끝에 원소추가
+        alert(li); // a,b,c,d
+
+        var li = ['c', 'e', 'a', 'b', 'd'];
+        li.sort(); // 오름차순?정렬 
+        alert(li); // a,b,c,d,e
+
+        var li = ['c', 'e', 'a', 'b', 'd'];
+        li.reverse(); // 역순정렬
+        alert(li); // e,d,c,b,a
+    </script>
+</body>
+</html>

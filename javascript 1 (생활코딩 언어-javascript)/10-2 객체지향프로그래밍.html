@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 객체 안에 또다른 객체와 함수도 들어갈 수 있음.
+        //grades라는 객체 안에 list라는 객체와 show라는 함수를 저장.
+        var grades = {
+            'list': {'egoing': 10, 'k8805': 6, 'sorialgi': 80}, 
+// key는 list, value는 객체속객체. egoing등은 객체속객체의 키값
+            'show' : function(){
+                for(var name in this.list){ //this는 function이 속한 객체(var grades)
+// for(변수 in객체) for in문
+// 객체grades 속 key가 list인 value(객체속객체) 안에 있는 key값들을 변수name에 대입 
+// = 객체 grades.list의 key들을 차례로 name변수에 적용함
+// 그 변수들은 egoing, k8805, sorialgi
+                    document.write(name+':'+this.list[name]+"<br />");
+                }// name은 변수로 가져온 key값 그대로,
+                 // this.list[name] 객체속객체의 키값에 상응하는 value값 출력.
+            }
+        }; 
+
+        //var grades의 정의 만으로는 화면에 아무것도 출력 X. 다음을 통해 function실행.
+        grades.show();
+        //grades['show'()]와 동일
+    </script>
+</body>
+</html>

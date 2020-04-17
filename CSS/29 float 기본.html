@@ -1,0 +1,42 @@
+<!-- float는 사용빈도 높은 중요한 속성.
+이미지 삽입을 보다 자연스럽게 할 때 사용.
+flex 등장 전 레이아웃 설정시 사용빈도 높았음.(여전히 많이 사용됨.)  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>float</title>
+  <style>
+    img{
+      width: 350px;
+      float: right;
+      margin: 20px;
+    }
+    /* 원래는 이미지 삽입시 글자들이 이미지의 상단이나 하단에 위치함.
+    float속성을 이용하면 글자들이 이미지같은 다른 엘리먼트 옆으로도 자리하여 어우러짐.
+    left, right로 이미지의 위치 조정 .*/
+
+    p{
+      border:1px solid gray;
+    }
+
+  </style>
+</head>
+<body>
+  <img src="sample.jpg" alt="">
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus ipsa animi quasi, autem error! Aut quidem placeat iste, similique sed dolores possimus. Delectus quo unde dolores corporis aperiam neque pariatur sapiente sint similique esse rem velit reprehenderit provident laboriosam laborum illo, nulla odit est consequatur ipsum, ipsa soluta veniam maxime!
+  </p>
+
+  <p style="clear:both;">
+    <!-- clear속성을 준 태그에는 float속성 적용이 해제됨.
+    이때 clear의 속성값이 float의 속성값과 일치해야 적용해제가 가능하며,
+    both로 입력하는 경우 left,right 모두에 해당되어 더욱 효율적. -->
+
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora ducimus dicta officiis quaerat ullam nostrum, ad amet. Commodi, quae sint atque quam, obcaecati delectus, reiciendis fuga aliquid voluptatem voluptates natus labore nemo quos tenetur repellat, nam iusto ad corporis cumque iste dignissimos. Adipisci sint quas optio eius, amet ratione alias itaque aspernatur suscipit doloribus voluptatibus. Fuga ullam laboriosam tempore. Blanditiis officiis consequatur ipsam reiciendis labore ullam deserunt tempore dignissimos mollitia, cum ratione. Ducimus, itaque. Laudantium, qui alias eligendi quis laboriosam eaque magnam? Similique doloribus qui quam nam consectetur labore perspiciatis, odit autem fugiat, quas amet ducimus natus rem corporis, illo temporibus quasi dignissimos possimus? Fuga odio, accusamus, beatae necessitatibus dolore ipsum, quia minima officiis dolorem saepe id possimus! Consectetur commodi modi, repellat amet perspiciatis officia illo nulla nihil tempora odio eum fuga, placeat cumque exercitationem. Aspernatur laboriosam nam veniam maxime aliquid assumenda, voluptate recusandae aut, natus repellat modi, incidunt cupiditate molestiae at ex eaque enim perspiciatis dolore vitae adipisci, neque mollitia eos provident. Commodi rem, laborum voluptatem! Doloribus ex rem vero facere autem eius reiciendis neque minus deserunt voluptatem hic, vitae, amet dolores enim voluptates a ipsa necessitatibus temporibus quisquam. Amet culpa, aperiam consequatur. Laboriosam facere id, facilis ea earum ipsum nobis fugit corporis sed praesentium, magnam ipsam illo accusantium quod repellendus sapiente ut saepe asperiores error. Distinctio delectus pariatur adipisci quia nesciunt illum harum voluptas incidunt ut, architecto soluta velit eius a omnis assumenda, accusamus dolor molestiae minima? Quis ipsa modi tempore distinctio laboriosam natus hic. Officiis labore expedita dolorem nesciunt unde eveniet, nostrum ab voluptatem iure modi quod error quisquam eos at eaque quis, itaque non beatae maiores repudiandae commodi aut aperiam optio! Delectus facere enim laboriosam, mollitia omnis qui quibusdam natus consequatur eaque. Quod inventore at veritatis praesentium, error non, ipsam dolores omnis architecto, laboriosam provident, similique eveniet doloribus. Suscipit est error perferendis mollitia, corporis necessitatibus quod, tempora tempore ad consequuntur aliquam, dolor ipsam! Exercitationem dignissimos eligendi consectetur debitis quas quia quod minima. Laborum iusto unde labore corporis fugit perferendis perspiciatis rem, aspernatur quidem repellat voluptates dignissimos dolorum tenetur quos aperiam earum nam consequatur omnis sequi porro at cumque nemo. Sed, voluptatum dolorum aspernatur eos ipsam magnam itaque sapiente labore molestias in eum laboriosam vero excepturi vel odio quos adipisci neque numquam natus illo iure pariatur repellendus voluptas enim. Aspernatur beatae, quo, minus doloribus aliquam voluptate voluptates veniam dolorum consequuntur, cupiditate odio eum labore, est praesentium cumque.
+  </p>
+</body>
+</html>

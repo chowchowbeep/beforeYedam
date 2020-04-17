@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <!-- utf-8 한글이 깨지지 않도록 -->
+    <title></title>
+  </head>
+  <body>
+    <form action="http://localhost/color.php">
+      <h1>색상</h1>
+      <select name="color1">
+        <option value="red">붉은색</option>
+        <!-- 콤보박스 생성 -->
+        <option value="black">검은색</option>
+        <option value="blue">파란색</option>
+      </select>
+
+      <h1>색상2 (다중선택)</h1>
+      <select name="color2" multiple>
+        <!-- multiple속성은 따로 속성값x ctrl눌러서 다중선택 가능하도록 함 -->
+        <option value="red">붉은색</option><!-- 다중선택 콤보박스 생성 -->
+        <option value="black">검은색</option>
+        <option value="blue">파란색</option>
+      </select>
+
+      <input type="submit">
+ <!-- 각 컨트롤에 값을 선택하고 submit버튼을 누르면 action속성의 주소로 값이 제출됨.
+ 그리고나서 주소가 바뀌는데,
+ 원래 주소 뒤에 select name과 option value이 짝지어진 것을 확인할 수 있음.
+ ex)http://localhost/color.php?color1=red&color2=black&color2=blue -->
+    </form>
+  </body>
+</html>
+
+  <!-- 요약 <p></p>생략
+  <form action="">
+  <select name=""> <option value=""></option> </select>
+  <select name="" multiple> <option value=""></option> </select>
+  <input type="submit">
+  </form> -->

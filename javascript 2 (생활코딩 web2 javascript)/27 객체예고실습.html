@@ -1,0 +1,95 @@
+
+<!DOCTYPE HTML>
+<html lang='en'>
+<head>
+  <meta charset="utf-8">
+  <script>
+    // 함수이름 지정시 중복되지 않도록 주의!!
+    /* function nightDayHandlerBody가 동작하도록,
+    객체 안에 SetBackgroundColor,SetColor라는 이름을 가진 함수를
+    아래를 참고하여 삽입해준다. */
+    var Body = {
+      "SetBackgroundColor":
+      function(color){
+        var target = document.querySelector('body');
+        target.style.backgroundColor = color;
+      },
+      "SetColor":
+      function(color){
+        var target = document.querySelector('body');
+        target.style.color = color;
+      }
+    }
+
+    var Links ={
+      "SetColor":
+      function(color){
+        var alist = document.querySelectorAll('a')
+        var i = 0;
+        while(i < alist.length){
+          alist[i].style.color = color;
+          i = i + 1;
+        }
+      }
+    }
+
+    // function LinksSetColor(color){
+    //   var alist = document.querySelectorAll('a')
+    //   var i = 0;
+    //   while(i < alist.length){
+    //    alist[i].style.color = color;
+    //    i = i + 1;
+    //   }
+    // } 
+    // Links 객체 안에 메소드(객체 내 함수)로 삽입
+
+    // function BodySetColor(color){
+    //   document.querySelector('body').style.color = color;
+    // } 
+    // Body 객체 안에 메소드로 삽입
+
+    // function BodySetBackgroundColor(color){
+    //   document.querySelector('body').style.backgroundColor = color;
+    // }
+
+    function nightDayHandler(self){
+      if(self.value === 'night'){ 
+      // 매개변수로 받은 인자 input태그의 value가 'night'와 같다면
+      // (input태그 onclick할때 value가 night라면)
+       Body.SetBackgroundColor('black'); 
+       // Body객체의 SetBackgroundColor함수를 호출하는데, 
+       // 인자 black을 parameter에 제공(메소드 호출방법1)
+       Body.SetColor('white');
+       self.value = 'day'; 
+       // 매개변수로 받은 인자 input태그의 value에 'day'를 대입
+
+       Links["SetColor"]('powderblue'); 
+       // Links객체의 SetColor함수를 호출하는데, 
+       // 인자 powderblue를 parameter에 제공(메소드 호출방법2)
+
+      } else {
+        Body.SetBackgroundColor('white');
+        Body.SetColor('black');
+        self.value = 'night';
+
+        Links.SetColor('blue');
+      }
+    }
+  </script>
+</head>
+<body>
+  <h1><a href="index.html">WEB</a></h1>
+
+  <input id="night_day" type="button" value="night" onclick="
+    nightDayHandler(this); //현재태그인input태그를 함수의 인자로 제공
+  ">
+  <ol>
+    <li><a href="1.html">HTML</a></li>
+    <li><a href="2.html">CSS</a></li>
+    <li><a href="3.html">JavaScript</a></li>
+  </ol>
+  <h2>WEB</h2>
+  <p>The World Wide Web (abbreviated WWW or the Web) is an information space where documents and other web resources are identified by Uniform Resource Locators (URLs), interlinked by hypertext links, and can be accessed via the Internet.[1] English scientist Tim Berners-Lee invented the World Wide Web in 1989. He wrote the first web browser computer program in 1990 while employed at CERN in Switzerland.[2][3] The Web browser was released outside of CERN in 1991, first to other research institutions starting in January 1991 and to the general public on the Internet in August 1991.
+  </p>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function get_members(){
+            return ['egoing', 'k8805', 'sorialgi']; 
+        }
+        var members = get_members();
+        // members.length는 members의 배열에 담긴 데이터 갯수 알려줌
+        for(i = 0; i < members.length; i++){
+            // members[i].toUpperCase()는 members[i]에 담긴 문자를 대문자로 변환
+            document.write(members[i].toUpperCase());
+            document.write('<br/>')
+        } 
+        // -> 전체 데이터의 갯수가 너무 많을 때, 변동이 있을 때 편리함.
+    </script>
+</body>
+</html>

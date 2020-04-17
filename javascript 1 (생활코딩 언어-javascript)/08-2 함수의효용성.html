@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function numbering(){
+            var i = 0;
+            while(i < 10){
+                document.write(i+" ");
+                i += 1;
+            }   
+        }
+        // numbering();
+        for(var i = 0; i < 10; i++){
+            numbering(); 
+            document.write("<br/>")
+        }  
+        /*
+        for문 내의 변수 i와 함수numbering 내의 변수 i의 값은 별개로 간주.
+        -> numbering 마지막 실행시 i값이 10이 되었지만 for문으로 돌아갔을 때 for문 안에서도 i값이 10은 아님.
+        혹은 for문과 numbering에서 변수를 서로 다르게 ? i, j?
+        */ 
+        /*
+        0 1 2 3 4 5 6 7 8 9 // for문 i값 0. numbering의 i값만 0~10 변화
+        0 1 2 3 4 5 6 7 8 9 // for문 i값 1. numbering의 i값만 0~10 변화
+        0 1 2 3 4 5 6 7 8 9 // for문 i값 2. numbering의 i값만 0~10 변화
+        0 1 2 3 4 5 6 7 8 9
+        0 1 2 3 4 5 6 7 8 9 
+        0 1 2 3 4 5 6 7 8 9 
+        0 1 2 3 4 5 6 7 8 9 
+        0 1 2 3 4 5 6 7 8 9 
+        0 1 2 3 4 5 6 7 8 9 
+        0 1 2 3 4 5 6 7 8 9 
+        */
+    </script>
+</body>
+</html>

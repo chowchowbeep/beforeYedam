@@ -1,0 +1,55 @@
+<!--
+배열은 공통되는 속성을 담아놓는 상자같은 것
+배열의 문법과 설정방법을 알아 볼 것
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>array</title>
+</head>
+<body>
+	<h1>Array</h1>
+	
+	
+	<h2>array Syntax</h2>
+	<script>
+		var coworkers = ["chowchow", "sowsow"];
+//		> coworkers라는 variable에 array라는 
+//		datatype(여러개의 elements)이 담긴 것,
+//		> 배열에 coworkers라는 이름을 붙인 것.
+//
+//		문자는 "" 배열은 []대괄호 안에 입력
+	</script>
+
+
+	<h2>get</h2>
+	<script>
+		document.write(coworkers[0]);
+		document.write(coworkers[1]);
+//		문서에서 변수가coworders인 배열에서 0번째,1번째(index)에
+//		해당하는 elements chowchowsowsow반환.
+	</script>
+	
+	
+	<h2>add data</h2>
+	<script>
+		coworkers.push('tami');
+		coworkers.push('rumi');
+//		> variable이 coworkers인 배열에 
+//		element인 'tami', 'rumi'를 추가함
+//		> 아래에서 데이터 갯수가 총 4개로 카운트되게 됨. 
+	</script>
+	
+	
+	
+	<h2>count</h2>
+	<script>
+		document.write(coworkers.length);
+//		문서에서 coworkers를 변수로 갖는 데이터의 갯수를 반환
+	</script>
+</body>
+</html>
+
+

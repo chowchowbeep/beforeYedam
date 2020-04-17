@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>box model_중요</title>
+  <style>
+    p, a{
+      border:10px solid red;
+      padding:20px;
+      margin:120px;
+      width:450px;
+    }
+    /* padding은 태그 컨텐트에서(border 내) 사방으로 차지하는 여백
+      margin은 태그의 border 외 사방으로 차지하는 여백
+      (크롬우클릭 - 검사를 통해 해당영역의 이미지 확인 가능)
+      ※ 마진겹침이 적용되는 상태(중복된 크기의 여백은 겹쳐짐)
+      width,height는 태그의 넓이와 높이를 각각 설정 */
+  </style>
+</head>
+<body>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    Ratione aut dolor, magnam sit doloremque, sed perferendis eaque
+    et fuga iste quasi non accusantium quaerat possimus! Amet accusamus
+    nam aspernatur harum.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    Ratione aut dolor, magnam sit doloremque, sed perferendis eaque
+    et fuga iste quasi non accusantium quaerat possimus! Amet accusamus
+    nam aspernatur harum.
+  </p>
+  안녕안녕<a href="http://atag.com">생활코딩</a>으로 와
+  <!-- block level element인 p태그와 달리,
+   inline element인 a태그는 padding적용은 가능하지만
+   width, height는 적용불가 -->
+</body>
+</html>
+
+<!-- 태그의 부피감을 결정하는 것이 box model -->
